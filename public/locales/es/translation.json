@@ -1,0 +1,26 @@
+{
+    "nav": {
+        "home": "Inicio",
+        "services": "Servicios",
+        "about": "Sobre Nosotros & Contacto"
+    },
+    "hero": {
+        "tagline_1": "Construimos el futuro.",
+        "tagline_2": "Desarrollo Web y Agentes IA",
+        "cta_main": "Iniciar un Proyecto",
+        "cta_secondary": "Ver Casos de Estudio"
+    },
+    "services": {
+        "heading": "Nuestros Servicios Clave",
+        "web_dev": "Desarrollo Web",
+        "marketing": "Marketing y Posicionamiento SEO",
+        "ai_agents": "Agentes de Inteligencia Artificial",
+        "desc_web": "Sitios web modernos, responsivos y de alto rendimiento construidos con React, Vite y sistemas de diseño vanguardistas."
+    },
+    "contact": {
+        "name": "Tu Nombre",
+        "email": "Tu Correo Electrónico",
+        "message": "Tu Mensaje",
+        "button": "Enviar Consulta"
+    }
+}

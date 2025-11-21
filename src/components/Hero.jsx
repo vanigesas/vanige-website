@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ArrowRight, Code, Cpu, TrendingUp, CheckCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import './Hero.css';
 
 const Hero = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="hero" id="home">
             <div className="container hero-container">
@@ -19,7 +22,7 @@ const Hero = () => {
                     </div>
 
                     <h1 className="hero-title">
-                        Scalable Digital Solutions for <span className="text-highlight">Modern Business</span>
+                        {t('hero.tagline_1')} <span className="text-highlight">{t('hero.tagline_2')}</span>
                     </h1>
 
                     <p className="hero-subtitle">
@@ -28,10 +31,10 @@ const Hero = () => {
 
                     <div className="hero-cta">
                         <button className="btn-primary">
-                            Schedule Consultation <ArrowRight size={18} />
+                            {t('hero.cta_main')} <ArrowRight size={18} />
                         </button>
                         <button className="btn-secondary">
-                            Explore Our Services
+                            {t('hero.cta_secondary')}
                         </button>
                     </div>
 

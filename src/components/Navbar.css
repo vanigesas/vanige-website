@@ -62,6 +62,26 @@
     /* Remove underline animation */
 }
 
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid var(--bg-accent);
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+}
+
+.lang-btn:hover {
+    border-color: var(--accent-primary);
+    color: var(--accent-primary);
+}
+
 .cta-btn {
     padding: 8px 20px;
     background: var(--accent-primary);
@@ -116,5 +136,9 @@
         padding: 12px 0;
         width: 100%;
         text-align: center;
+    }
+
+    .lang-btn {
+        margin: 10px 0;
     }
 }

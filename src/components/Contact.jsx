@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
 import { Mail, Phone, MapPin, Facebook, Twitter, Linkedin, Instagram, Loader2, CheckCircle, AlertCircle } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import './Contact.css';
 
 const Contact = () => {
+    const { t } = useTranslation();
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -83,36 +85,36 @@ const Contact = () => {
                     <div className="contact-form-wrapper">
                         <form className="contact-form" onSubmit={handleSubmit}>
                             <div className="form-group">
-                                <label htmlFor="name">Name</label>
+                                <label htmlFor="name">{t('contact.name')}</label>
                                 <input
                                     type="text"
                                     id="name"
                                     name="name"
-                                    placeholder="Your Name"
+                                    placeholder={t('contact.name')}
                                     value={formData.name}
                                     onChange={handleChange}
                                     required
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="email">Email</label>
+                                <label htmlFor="email">{t('contact.email')}</label>
                                 <input
                                     type="email"
                                     id="email"
                                     name="email"
-                                    placeholder="your@email.com"
+                                    placeholder={t('contact.email')}
                                     value={formData.email}
                                     onChange={handleChange}
                                     required
                                 />
                             </div>
                             <div className="form-group">
-                                <label htmlFor="message">Message</label>
+                                <label htmlFor="message">{t('contact.message')}</label>
                                 <textarea
                                     id="message"
                                     name="message"
                                     rows="4"
-                                    placeholder="How can we help you?"
+                                    placeholder={t('contact.message')}
                                     value={formData.message}
                                     onChange={handleChange}
                                     required
@@ -133,7 +135,7 @@ const Contact = () => {
                                         <CheckCircle size={20} /> Message Sent
                                     </>
                                 ) : (
-                                    'Send Message'
+                                    t('contact.button')
                                 )}
                             </button>
 

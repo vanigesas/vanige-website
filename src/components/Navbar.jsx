@@ -1,11 +1,16 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, Globe } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
+import { useNavigate, useLocation } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 import './Navbar.css';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
+  const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +20,14 @@ const Navbar = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  const toggleLanguage = () => {
+    if (i18n.language.startsWith('es')) {
+      navigate('/en');
+    } else {
+      navigate('/');
+    }
+  };
+
   return (
     <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
       <div className="container navbar-container">
@@ -23,10 +36,16 @@ const Navbar = () => {
         </div>
 
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>
-          <a href="#home" onClick={() => setIsOpen(false)}>Home</a>
-          <a href="#services" onClick={() => setIsOpen(false)}>Services</a>
-          <a href="#about" onClick={() => setIsOpen(false)}>About</a>
-          <a href="#contact" onClick={() => setIsOpen(false)} className="cta-btn">Contact Us</a>
+          <a href="#home" onClick={() => setIsOpen(false)}>{t('nav.home')}</a>
+          <a href="#services" onClick={() => setIsOpen(false)}>{t('nav.services')}</a>
+          <a href="#about" onClick={() => setIsOpen(false)}>{t('nav.about')}</a>
+
+          <button onClick={toggleLanguage} className="lang-btn">
+            <Globe size={16} />
+            {i18n.language.startsWith('es') ? 'EN' : 'ES'}
+          </button>
+
+          <a href="#contact" onClick={() => setIsOpen(false)} className="cta-btn">{t('contact.button')}</a>
         </div>
 
         <div className="menu-icon" onClick={() => setIsOpen(!isOpen)}>

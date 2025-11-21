@@ -23,8 +23,8 @@ export default async function handler(req, res) {
         });
 
         const mailOptions = {
-            from: `"${name}" <${process.env.BREVO_USER}>`, // Sender address (must be verified in Brevo)
-            to: 'vanigedevops@gmail.com', // Updated to user's Brevo email
+            from: `"${name}" <vanigedevops@gmail.com>`, // Sender address (must be verified in Brevo)
+            to: 'vanigedevops@gmail.com', // Recipient
             replyTo: email,
             subject: `New Contact Form Submission from ${name}`,
             text: `

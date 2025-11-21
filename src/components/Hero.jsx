@@ -30,12 +30,12 @@ const Hero = () => {
                     </p>
 
                     <div className="hero-cta">
-                        <button className="btn-primary">
+                        <a href="#contact" className="btn-primary">
                             {t('hero.cta_main')} <ArrowRight size={18} />
-                        </button>
-                        <button className="btn-secondary">
+                        </a>
+                        <a href="#services" className="btn-secondary">
                             {t('hero.cta_secondary')}
-                        </button>
+                        </a>
                     </div>
 
                     <div className="hero-trust">

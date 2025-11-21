@@ -63,7 +63,35 @@ export default async function handler(req, res) {
       `,
         };
 
+        // 1. Send notification to Company
         await transporter.sendMail(mailOptions);
+
+        // 2. Send auto-response to Client
+        const clientMailOptions = {
+            from: '"Vanige S.A.S" <info@vanigedev.com.co>',
+            to: email,
+            subject: 'Hemos recibido tu solicitud - VanigeDev',
+            html: `
+<div style="background-color: #0d2f4d; padding: 20px; text-align: center;"><img style="max-width: 150px; height: auto; display: block; margin: 0 auto;" src="https://raw.githubusercontent.com/vanigesas/vanige-website/de1caf2eb0ecc8b3db5c4287d77bc52afabffc77/src/assets/images/logo.png" alt="Vanige Logo"></div>
+<div style="background-color: #1a4970; color: white; padding: 15px 20px; text-align: center;">
+<h2 style="margin: 0; font-size: 24px;">¡Hemos recibido tu mensaje, ${name}!</h2>
+</div>
+<div style="padding: 25px;">
+<p style="font-size: 16px;">Hola <strong>${name}</strong>,</p>
+<p style="font-size: 16px;">Queremos agradecerte por tomarte el tiempo de contactarnos. Valoramos mucho tu interés en VanigeDev.</p>
+<div style="background-color: #f0f7ff; padding: 15px; border-radius: 8px; border-left: 5px solid #1a4970; margin: 20px 0;">
+<p style="margin: 0; font-style: italic; color: #0d2f4d;"><strong>Revisaremos tu solicitud y te responderemos lo antes posible, generalmente en las próximas 48 horas.</strong></p>
+</div>
+<p style="font-size: 16px;">Mientras tanto, si necesitas más información, no dudes en visitar nuestra página de servicios o responder directamente a este correo.</p>
+<p style="font-size: 16px; margin-top: 30px;">¡Que tengas un excelente día!</p>
+<p style="font-size: 16px; margin-bottom: 0;">Atentamente,</p>
+<p style="font-size: 16px; color: #1a4970; font-weight: bold; margin-top: 5px;">El equipo de VanigeDev</p>
+</div>
+<div style="text-align: center; padding: 15px; font-size: 12px; color: #777; border-top: 1px solid #e0e0e0; background-color: #f8f8f8;">Visita nuestra web: <a style="color: #1a4970; text-decoration: none;" href="https://vanigedev.com.co/">vanigedev.com.co</a></div>
+            `
+        };
+
+        await transporter.sendMail(clientMailOptions);
 
         return res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {

@@ -25,29 +25,6 @@
 .logo {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-weight: 700;
-    font-size: 1.25rem;
-    letter-spacing: 0.5px;
-}
-
-.logo img {
-    height: 32px;
-    width: auto;
-}
-
-.logo-text {
-    color: var(--text-primary);
-}
-
-.nav-links {
-    display: flex;
-    gap: 32px;
-    align-items: center;
-}
-
-.nav-links a {
-    font-size: 0.95rem;
     color: var(--text-secondary);
     transition: var(--transition-fast);
     font-weight: 500;

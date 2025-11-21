@@ -3,8 +3,8 @@ import whatsappLogo from '../assets/images/whatsapp-logo.svg';
 import './WhatsAppButton.css';
 
 const WhatsAppButton = () => {
-    const phoneNumber = '15551234567'; // Replace with real number
-    const message = encodeURIComponent("Hello, I'm interested in your services and would like to know more about pricing.");
+    const phoneNumber = '573013507441'; // Replace with real number
+    const message = encodeURIComponent("Hola, estoy interesado en sus servicios y me gustaría saber más sobre los precios.");
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${message}`;
 
     return (

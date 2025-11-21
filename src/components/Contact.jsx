@@ -62,15 +62,15 @@ const Contact = () => {
                         <div className="contact-details">
                             <div className="contact-item">
                                 <Mail className="contact-icon" />
-                                <span>contact@vanige.com</span>
+                                <span>contacto@vanigedev.com.co</span>
                             </div>
                             <div className="contact-item">
                                 <Phone className="contact-icon" />
-                                <span>+1 (555) 123-4567</span>
+                                <span>+57 301 350 7441</span>
                             </div>
                             <div className="contact-item">
                                 <MapPin className="contact-icon" />
-                                <span>123 Tech Avenue, Innovation City</span>
+                                <span>Bucaramanga, Colombia</span>
                             </div>
                         </div>
 

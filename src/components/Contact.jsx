@@ -54,7 +54,7 @@ const Contact = () => {
                     <div className="contact-info">
                         <h2 className="section-title">Get in Touch</h2>
                         <p className="contact-desc">
-                            Ready to transform your business? Contact us today for a free consultation.
+                            Ready to transform your business? Contact us via the form below or use the WhatsApp button for a quick chat.
                         </p>
 
                         <div className="contact-details">

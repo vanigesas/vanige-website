@@ -1,0 +1,105 @@
+.services {
+    padding: 100px 0;
+    background: var(--bg-secondary);
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: var(--text-primary);
+}
+
+.section-subtitle {
+    color: var(--text-secondary);
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+    gap: 24px;
+}
+
+.service-card {
+    background: var(--bg-primary);
+    border: 1px solid var(--bg-accent);
+    border-radius: var(--radius-md);
+    padding: 32px;
+    transition: var(--transition-fast);
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    border-color: var(--accent-primary);
+    transform: translateY(-4px);
+}
+
+.service-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    background: rgba(59, 130, 246, 0.1);
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-primary);
+    margin-bottom: 24px;
+}
+
+.service-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: var(--text-primary);
+}
+
+.service-desc {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 24px;
+    font-size: 0.95rem;
+    flex-grow: 1;
+}
+
+.service-features {
+    list-style: none;
+    border-top: 1px solid var(--bg-accent);
+    padding-top: 16px;
+}
+
+.service-features li {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 8px;
+    display: flex;
+    align-items: center;
+}
+
+.service-features li::before {
+    content: "•";
+    color: var(--accent-primary);
+    margin-right: 8px;
+    font-size: 1.2rem;
+    line-height: 0;
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+}

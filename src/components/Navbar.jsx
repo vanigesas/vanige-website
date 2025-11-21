@@ -20,6 +20,7 @@ const Navbar = () => {
       <div className="container navbar-container">
         <div className="logo">
           <img src={logo} alt="Vanige Logo" />
+          <span className="logo-text">VANIGE</span>
         </div>
 
         <div className={`nav-links ${isOpen ? 'open' : ''}`}>

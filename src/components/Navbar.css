@@ -16,28 +16,6 @@
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
 }
 
-.navbar-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.logo {
-    display: flex;
-    align-items: center;
-    color: var(--text-secondary);
-    transition: var(--transition-fast);
-    font-weight: 500;
-}
-
-.nav-links a:hover {
-    color: var(--accent-primary);
-}
-
-.nav-links a::after {
-    display: none;
-    /* Remove underline animation */
-}
 
 .cta-btn {
     padding: 8px 20px;

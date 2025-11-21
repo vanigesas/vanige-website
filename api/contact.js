@@ -36,7 +36,7 @@ export default async function handler(req, res) {
         <div style="font-family: 'Open Sans', Arial, sans-serif; line-height: 1.6; color: #333; max-width: 600px; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 8px rgba(0,0,0,0.05);">
             
             <div style="background-color: #0d2f4d; padding: 20px; text-align: center;">
-                <img src="/src/assets/images/logo.png" alt="Vanige Logo" style="max-width: 150px; height: auto; display: block; margin: 0 auto;">
+                <img src="https://raw.githubusercontent.com/vanigesas/vanige-website/de1caf2eb0ecc8b3db5c4287d77bc52afabffc77/src/assets/images/logo.png" alt="Vanige Logo" style="max-width: 150px; height: auto; display: block; margin: 0 auto;">
             </div>
 
             <div style="background-color: #1a4970; color: white; padding: 15px 20px; text-align: center;">

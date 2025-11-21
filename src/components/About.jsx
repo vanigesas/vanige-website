@@ -1,9 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { CheckCircle, Users, Target, Lightbulb } from 'lucide-react';
+import { useTranslation } from 'react-i18next';
 import './About.css';
 
 const About = () => {
+    const { t } = useTranslation();
+
     return (
         <section className="about" id="about">
             <div className="container">
@@ -15,37 +18,37 @@ const About = () => {
                         transition={{ duration: 0.5 }}
                         viewport={{ once: true }}
                     >
-                        <h2 className="section-title">About Vanige S.A.S.</h2>
+                        <h2 className="section-title">{t('about.title')}</h2>
                         <p className="about-lead">
-                            We are a forward-thinking technology partner dedicated to transforming businesses through digital innovation.
+                            {t('about.lead')}
                         </p>
                         <p className="about-desc">
-                            Founded with a vision to bridge the gap between complex technology and business growth, Vanige S.A.S. specializes in delivering high-impact web solutions, data-driven marketing strategies, and cutting-edge AI implementations.
+                            {t('about.desc_1')}
                         </p>
                         <p className="about-desc">
-                            Our team consists of expert developers, creative strategists, and AI specialists who work collaboratively to ensure your digital presence is not just functional, but exceptional.
+                            {t('about.desc_2')}
                         </p>
 
                         <div className="values-grid">
                             <div className="value-item">
                                 <Target size={20} className="value-icon" />
                                 <div>
-                                    <h5>Result Oriented</h5>
-                                    <p>We focus on measurable outcomes and ROI.</p>
+                                    <h5>{t('about.value_1_title')}</h5>
+                                    <p>{t('about.value_1_desc')}</p>
                                 </div>
                             </div>
                             <div className="value-item">
                                 <Lightbulb size={20} className="value-icon" />
                                 <div>
-                                    <h5>Innovation First</h5>
-                                    <p>Always exploring the latest in Tech & AI.</p>
+                                    <h5>{t('about.value_2_title')}</h5>
+                                    <p>{t('about.value_2_desc')}</p>
                                 </div>
                             </div>
                             <div className="value-item">
                                 <Users size={20} className="value-icon" />
                                 <div>
-                                    <h5>Client Partnership</h5>
-                                    <p>Your success is our success.</p>
+                                    <h5>{t('about.value_3_title')}</h5>
+                                    <p>{t('about.value_3_desc')}</p>
                                 </div>
                             </div>
                         </div>
@@ -60,19 +63,19 @@ const About = () => {
                     >
                         <div className="stat-card">
                             <div className="stat-number">5+</div>
-                            <div className="stat-label">Years of Excellence</div>
+                            <div className="stat-label">{t('about.stat_1_label')}</div>
                         </div>
                         <div className="stat-card">
                             <div className="stat-number">100+</div>
-                            <div className="stat-label">Projects Delivered</div>
+                            <div className="stat-label">{t('about.stat_2_label')}</div>
                         </div>
                         <div className="stat-card">
                             <div className="stat-number">50+</div>
-                            <div className="stat-label">AI Solutions Deployed</div>
+                            <div className="stat-label">{t('about.stat_3_label')}</div>
                         </div>
                         <div className="stat-card highlight">
                             <div className="stat-number">24/7</div>
-                            <div className="stat-label">Support & Maintenance</div>
+                            <div className="stat-label">{t('about.stat_4_label')}</div>
                         </div>
                     </motion.div>
                 </div>

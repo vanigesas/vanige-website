@@ -54,9 +54,9 @@ const Contact = () => {
             <div className="container">
                 <div className="contact-grid">
                     <div className="contact-info">
-                        <h2 className="section-title">Get in Touch</h2>
+                        <h2 className="section-title">{t('contact.title')}</h2>
                         <p className="contact-desc">
-                            Ready to transform your business? Contact us via the form below or use the WhatsApp button for a quick chat.
+                            {t('contact.desc')}
                         </p>
 
                         <div className="contact-details">
@@ -128,11 +128,11 @@ const Contact = () => {
                             >
                                 {status === 'loading' ? (
                                     <>
-                                        <Loader2 className="animate-spin" size={20} /> Sending...
+                                        <Loader2 className="animate-spin" size={20} /> {t('contact.sending')}
                                     </>
                                 ) : status === 'success' ? (
                                     <>
-                                        <CheckCircle size={20} /> Message Sent
+                                        <CheckCircle size={20} /> {t('contact.sent')}
                                     </>
                                 ) : (
                                     t('contact.button')
@@ -142,13 +142,13 @@ const Contact = () => {
                             {status === 'error' && (
                                 <div className="form-message error">
                                     <AlertCircle size={16} />
-                                    <span>{errorMessage || 'Failed to send message. Please try again.'}</span>
+                                    <span>{errorMessage || t('contact.error')}</span>
                                 </div>
                             )}
 
                             {status === 'success' && (
                                 <div className="form-message success">
-                                    <span>Thank you! We'll get back to you shortly.</span>
+                                    <span>{t('contact.success')}</span>
                                 </div>
                             )}
                         </form>
@@ -156,7 +156,7 @@ const Contact = () => {
                 </div>
 
                 <div className="footer-bottom">
-                    <p>&copy; {new Date().getFullYear()} Vanige S.A.S. All rights reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} {t('contact.footer_rights')}</p>
                 </div>
             </div>
         </footer>

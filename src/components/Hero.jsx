@@ -18,7 +18,7 @@ const Hero = () => {
                 >
                     <div className="hero-badge">
                         <span className="badge-dot"></span>
-                        Now accepting new enterprise clients
+                        {t('hero.badge')}
                     </div>
 
                     <h1 className="hero-title">
@@ -26,7 +26,7 @@ const Hero = () => {
                     </h1>
 
                     <p className="hero-subtitle">
-                        Vanige S.A.S. empowers companies with cutting-edge web development, data-driven marketing, and intelligent AI agents. We turn complex challenges into streamlined growth opportunities.
+                        {t('hero.subtitle')}
                     </p>
 
                     <div className="hero-cta">
@@ -39,11 +39,11 @@ const Hero = () => {
                     </div>
 
                     <div className="hero-trust">
-                        <p>Trusted by forward-thinking companies</p>
+                        <p>{t('hero.trust_text')}</p>
                         <div className="trust-badges">
-                            <div className="trust-item"><CheckCircle size={16} /> Enterprise Ready</div>
-                            <div className="trust-item"><CheckCircle size={16} /> 24/7 Support</div>
-                            <div className="trust-item"><CheckCircle size={16} /> Scalable Architecure</div>
+                            <div className="trust-item"><CheckCircle size={16} /> {t('hero.trust_1')}</div>
+                            <div className="trust-item"><CheckCircle size={16} /> {t('hero.trust_2')}</div>
+                            <div className="trust-item"><CheckCircle size={16} /> {t('hero.trust_3')}</div>
                         </div>
                     </div>
                 </motion.div>
@@ -58,22 +58,22 @@ const Hero = () => {
                     <div className="visual-card card-1">
                         <Code size={32} className="visual-icon" />
                         <div className="visual-text">
-                            <h4>Web Dev</h4>
-                            <p>React, Next.js, Node</p>
+                            <h4>{t('hero.visual_1_title')}</h4>
+                            <p>{t('hero.visual_1_desc')}</p>
                         </div>
                     </div>
                     <div className="visual-card card-2">
                         <Cpu size={32} className="visual-icon" />
                         <div className="visual-text">
-                            <h4>AI Agents</h4>
-                            <p>Automation & NLP</p>
+                            <h4>{t('hero.visual_2_title')}</h4>
+                            <p>{t('hero.visual_2_desc')}</p>
                         </div>
                     </div>
                     <div className="visual-card card-3">
                         <TrendingUp size={32} className="visual-icon" />
                         <div className="visual-text">
-                            <h4>Growth</h4>
-                            <p>SEO & Analytics</p>
+                            <h4>{t('hero.visual_3_title')}</h4>
+                            <p>{t('hero.visual_3_desc')}</p>
                         </div>
                     </div>
                 </motion.div>

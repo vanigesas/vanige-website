@@ -84,5 +84,9 @@
         "success": "Thank you! We'll get back to you shortly.",
         "error": "Failed to send message. Please try again.",
         "footer_rights": "Vanige S.A.S. All rights reserved."
+    },
+    "seo": {
+        "title": "Vanige S.A.S. | Web Development & AI Agents in Colombia | Digital Solutions",
+        "description": "Vanige S.A.S. offers scalable digital solutions: Web Development (React/Node.js), AI Agent Integration, and SEO Strategies. We transform your business!"
     }
 }

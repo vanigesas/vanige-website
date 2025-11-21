@@ -84,5 +84,9 @@
         "success": "¡Gracias! Nos pondremos en contacto con usted en breve.",
         "error": "Error al enviar el mensaje. Por favor, inténtelo de nuevo.",
         "footer_rights": "Vanige S.A.S. Todos los derechos reservados."
+    },
+    "seo": {
+        "title": "Vanige S.A.S. | Desarrollo Web & Agentes IA en Colombia | Soluciones Digitales",
+        "description": "Vanige S.A.S. ofrece soluciones digitales escalables: Desarrollo Web (React/Node.js), Integración de Agentes IA y Estrategias SEO. ¡Transformamos su negocio!"
     }
 }

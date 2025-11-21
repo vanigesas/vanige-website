@@ -7,6 +7,7 @@ import Services from './components/Services';
 import About from './components/About';
 import Contact from './components/Contact';
 import WhatsAppButton from './components/WhatsAppButton';
+import SEO from './components/SEO';
 
 function App() {
   const location = useLocation();
@@ -22,6 +23,7 @@ function App() {
 
   return (
     <div className="app">
+      <SEO />
       <Navbar />
       <Hero />
       <Services />

@@ -23,9 +23,9 @@ export default async function handler(req, res) {
         });
 
         const mailOptions = {
-            from: `"${name}" <vanigedevops@gmail.com>`, // Sender address (must be verified in Brevo)
-            to: 'vanigedevops@gmail.com', // Recipient
-            replyTo: email,
+            from: '"Vanige Contact Form" <info@vanigedev.com.co>', // Verified company email for SPF/DKIM compliance
+            to: 'vanigedevops@gmail.com', // Receiver
+            replyTo: email, // Client's email for reply
             subject: `New Contact Form Submission from ${name}`,
             text: `
         Name: ${name}

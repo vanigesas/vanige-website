@@ -24,7 +24,7 @@ export default async function handler(req, res) {
 
         const mailOptions = {
             from: `"${name}" <${process.env.BREVO_USER}>`, // Sender address (must be verified in Brevo)
-            to: 'andres.gomez@vanige.com', // Replace with your actual receiving email or env var
+            to: 'vanigedevops@gmail.com', // Updated to user's Brevo email
             replyTo: email,
             subject: `New Contact Form Submission from ${name}`,
             text: `
@@ -46,6 +46,7 @@ export default async function handler(req, res) {
         return res.status(200).json({ message: 'Email sent successfully' });
     } catch (error) {
         console.error('Error sending email:', error);
-        return res.status(500).json({ message: 'Failed to send email', error: error.message });
+        // Return the specific error message to the client for easier debugging
+        return res.status(500).json({ message: error.message || 'Failed to send email' });
     }
 }
